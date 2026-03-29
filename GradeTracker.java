@@ -29,7 +29,7 @@ class GradeTracker {
 				addStudent();
 				break;
 			case 2:
-//				addGrade();
+				addGrade();
 				break;
 			case 3:
 //				viewReport();
@@ -69,5 +69,57 @@ class GradeTracker {
         System.out.println("  Roll  : " + rollno);
         System.out.println();
 	}
-
+	
+	private static void addGrade() {
+		System.out.println("-----------------------------------------");
+        System.out.println("  [ Add Grade ]");
+        System.out.println("-----------------------------------------");
+        System.out.println();
+        
+        System.out.println("Enter rollno: ");
+        String rollno = sc.nextLine();
+        
+        Student match = null;
+        
+        for(Student s : student) {
+        	if(s.getRollNo().equals(rollno)) {
+        		match = s;
+        		break;
+        	}
+        }
+        
+        if(match == null) {
+        	System.out.println();
+            System.out.println("  Error: No student found with roll " + rollno + ".");
+            return;
+        }
+        
+        System.out.println(" Found: " + match.getName() + " (" + match.getRollNo() + ")\n");
+        	
+        String addMore = "y";
+        
+        do {
+        	System.out.println("Enter Subject Name: ");
+        	String subject = sc.nextLine();
+        	
+        	System.out.println("Enter Mark (0 - 100): ");
+        	int mark = sc.nextInt();
+        	sc.nextLine();
+        	
+        	Grade g = new Grade(subject, mark);
+        	match.addGrade(g);
+        	
+        	System.out.println();
+            System.out.println("  Grade added!");
+            System.out.println("  " + match.getName() + "  |  " + subject + ": " + mark);
+            System.out.println();
+       
+	        System.out.print("Add another grade for this student? (y/n): ");
+//	        addMore = sc.next().charAt(0);
+	        addMore = sc.nextLine();
+        }while(addMore.equalsIgnoreCase("y"));
+        
+        System.out.println();
+	}
+	
 }
