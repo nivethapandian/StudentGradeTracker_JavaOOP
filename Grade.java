@@ -1,35 +1,27 @@
 package student_grade_tracker;
 
-class Grade{
+class Grade {
 	private String subject;
 	private int mark;
-	
-	Grade(String subject, int mark){
+
+	Grade(String subject, int mark) {
 		this.subject = subject;
-		this.mark = mark;
+		setMark(mark);
 	}
-	
-	
-	//Setter Methods - Subject, Marks
-	/* (not necessary)
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-	*/
 	
 	public void setMark(int mark) {
-		if(mark >= 0 && mark <= 100) {
+		if (mark >= 0 && mark <= 100) {
 			this.mark = mark;
-		}
-		else
+		} else {
 			System.out.println("Invalid Mark!");
+			this.mark = 0;
+		}
 	}
-	
-	//Getter Methods - Subject, Mark
+
 	public String getSubject() {
 		return subject;
 	}
-	
+
 	public int getMark() {
 		return mark;
 	}
