@@ -98,7 +98,7 @@ class GradeTracker {
 		String addMore = "y";
 
 		do {
-			System.out.print("\nEnter Subject Name: ");
+			System.out.print("Enter Subject Name: ");
 			String subject = sc.nextLine();
 
 			System.out.print("Enter Mark (0 - 100): ");
@@ -138,7 +138,7 @@ class GradeTracker {
         		return;
         	}
         }
-        System.out.println("\n  Error: Student not found.\n");
+        System.out.println("\n  Error: Student not found\n");
 	}
 
 }
