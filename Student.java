@@ -32,11 +32,18 @@ class Student implements Reportable {
 	
 	//Average
 	public float average() {
-		int sum = 0;
+		float sum = 0;
+		float	avg =0;
 		for(Grade gr :grades) {
 			sum += gr.getMark();
 		}
-		int avg = sum / grades.size();
+		try {
+		 avg = sum / grades.size();
+		}
+		catch(Exception e) {}
+		finally {
+			System.out.print("");
+		}
 		return avg;
 	}
 	
@@ -101,5 +108,9 @@ class Student implements Reportable {
         }
         System.out.println("=========================================");
 	}
-
+	
+	@Override
+	public String toString() {
+        return String.format("  %-7s %-18s %-7.2f %s", rollNo, name, average(), gradeLetter());
+	}
 }

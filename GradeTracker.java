@@ -35,7 +35,7 @@ class GradeTracker {
 				viewReport();
 				break;
 			case 4:
-//				viewAllStudents();
+				viewAllStudents();
 				break;
 			case 5:
 				System.out.println("\n  Thank you for using Grade Tracker!");
@@ -89,7 +89,7 @@ class GradeTracker {
 
 		if (match == null) {
 			System.out.println();
-			System.out.println("  Error: No student found with roll " + rollno + ".");
+			System.out.println("  Error: No student found with roll " + rollno);
 			return;
 		}
 
@@ -139,6 +139,18 @@ class GradeTracker {
         	}
         }
         System.out.println("\n  Error: Student not found\n");
+	}
+	
+	private static void viewAllStudents() {
+		System.out.println("=========================================");
+        System.out.println("  ALL STUDENTS");
+        System.out.println("=========================================");
+        System.out.println("  Roll    Name              Avg    Grade");
+        System.out.println("  .....................................");
+        
+        for(Student s : student) {
+        	System.out.println(s.toString());
+        }
 	}
 
 }
