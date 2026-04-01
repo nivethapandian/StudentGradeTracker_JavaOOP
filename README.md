@@ -18,9 +18,9 @@ A lightweight, console-based Java application designed to help teachers manage s
 ## Table of Contents
 
 1. [Technologies & Concepts Used](#technologies--concepts-used)
-2. [OOP Principles Demonstrate](oop-principles-demonstrated)
-3. [Run the Console Application](run-the-console-application)
-4. [Usage](usage)
+2. [OOP Principles Demonstrate](#oop-principles-demonstrated)
+3. [Run the Console Application](#run-the-console-application)
+4. [Usage](#usage)
 
 ## Technologies & Concepts Used
 
