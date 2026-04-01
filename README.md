@@ -15,6 +15,13 @@ A lightweight, console-based Java application designed to help teachers manage s
 
 **Global View:** View a summarized list of all students and their current averages in one place.
 
+## Table of Contents
+
+1. [Technologies & Concepts Used](#technologies--concepts-used)
+2. [OOP Principles Demonstrate](oop-principles-demonstrated)
+3. [Run the Console Application](run-the-console-application)
+4. [Usage](usage)
+
 ## Technologies & Concepts Used
 
 **Language:** Pure Java (JDK 8+)
@@ -34,7 +41,7 @@ This project serves as a practical application of standard Java OOP concepts:
 
 **Polymorphism:** Overrides the default Object.toString() method to provide a custom, neatly formatted summary of a student when iterating through lists.
 
-## Running the Console Application
+## Run the Console Application
 You can run this project using your favorite Integrated Development Environment (IDE) or directly from the command line.
 
 ### Prerequisites
